@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marwan ElSayed – Professional Designer & Multimedia Editor specializing in Graphic Design, Video Editing, Motion Graphics, and Audio Production." />
+  <meta name="keywords" content="Marwan ElSayed, Graphic Designer, Video Editor, Motion Graphics, Audio Production, Portfolio" />
+  <meta name="author" content="Marwan ElSayed" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Marwan ElSayed | Creative Portfolio" />
+  <meta property="og:description" content="Professional Designer & Multimedia Editor creating compelling visual identities and high-quality content." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marwanelsayed.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&q=80" />
+
+  <title>Marwan ElSayed | Designer & Multimedia Editor</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">ME</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Marwan ElSayed">ME</a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home"         class="nav-link active">Home</a>
+        <a href="#about"        class="nav-link">About</a>
+        <a href="#services"     class="nav-link">Services</a>
+        <a href="#portfolio"    class="nav-link">Portfolio</a>
+        <a href="#skills"       class="nav-link">Skills</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact"      class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <!-- Animated background -->
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Floating shapes -->
+    <div class="float-shape shape-circle"></div>
+    <div class="float-shape shape-ring"></div>
+    <div class="float-shape shape-dot-grid"></div>
+
+    <div class="hero-container">
+      <div class="hero-image-wrap" data-parallax="0.04">
+        <div class="hero-image-border">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80"
+            alt="Marwan ElSayed – Professional Designer"
+            class="hero-image"
+            loading="eager"
+          />
+        </div>
+        <div class="hero-badge">
+          <i class="fa-solid fa-star"></i>
+          <span>Available for Work</span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Marwan <span class="gradient-text">ElSayed</span></h1>
+        <div class="hero-title-wrap">
+          <span class="hero-title-prefix">I'm a </span>
+          <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-bio">
+          I create compelling visual identities and produce high-quality video and audio content that helps brands stand out and communicate with impact.
+        </p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">
+            <i class="fa-solid fa-briefcase"></i> View Portfolio
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+          <a href="assets/cv/Marwan-ElSayed-CV.pdf" class="btn btn-ghost" download aria-label="Download CV">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://behance.net/marwanelsayed"  target="_blank" rel="noopener" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          <a href="https://linkedin.com/in/marwanelsayed" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/marwanelsayed"   target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/201001234567"            target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">The Creative <span class="gradient-text">Mind</span> Behind the Work</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-img-frame">
+            <img
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80"
+              alt="Marwan at work in his creative studio"
+              class="about-img"
+              loading="lazy"
+            />
+            <div class="about-exp-badge">
+              <span class="exp-years">7+</span>
+              <span class="exp-label">Years of<br>Experience</span>
+            </div>
+          </div>
+          <div class="about-img-deco"></div>
+        </div>
+
+        <div class="about-content reveal">
+          <p class="about-text">
+            I'm <strong>Marwan ElSayed</strong>, a multidisciplinary creative professional based in Cairo with over seven years of experience transforming brand visions into memorable visual and multimedia experiences.
+          </p>
+          <p class="about-text">
+            From crafting polished brand identities and social campaigns to producing cinematic video edits and immersive motion graphics, I bring a sharp eye for detail and a genuine passion for storytelling across every medium.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Multi-disciplinary creative with 4 core specialisations</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Worked with 15+ international brands across 10+ countries</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Featured on Behance with over 50k profile views</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Certified Adobe Creative Cloud Expert</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Let's Work Together <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid reveal">
+        <div class="stat-card glass">
+          <i class="fa-solid fa-calendar-days stat-icon"></i>
+          <span class="stat-number" data-target="7">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">Years Experience</p>
+        </div>
+        <div class="stat-card glass">
+          <i class="fa-solid fa-layer-group stat-icon"></i>
+          <span class="stat-number" data-target="250">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card glass">
+          <i class="fa-solid fa-face-smile stat-icon"></i>
+          <span class="stat-number" data-target="180">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">Happy Clients</p>
+        </div>
+        <div class="stat-card glass">
+          <i class="fa-solid fa-earth-americas stat-icon"></i>
+          <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+          <p class="stat-label">International Brands</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title">Premium <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle">End-to-end creative solutions tailored to elevate your brand.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass reveal" data-delay="0">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <h3 class="service-title">Graphic Design</h3>
+          <p class="service-desc">Brand identities, logos, print materials, and digital assets crafted with precision and strategic clarity to make your brand unmistakable.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-circle-dot"></i> Logo & Brand Identity</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Social Media Design</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Print & Packaging</li>
+          </ul>
+          <div class="service-glow"></div>
+        </div>
+
+        <div class="service-card glass reveal" data-delay="100">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-desc">Cinematic edits, color grading, and storytelling that transform raw footage into compelling visual narratives that captivate audiences.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-circle-dot"></i> Commercial Editing</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Color Grading</li>
+            <li><i class="fa-solid fa-circle-dot"></i> YouTube & Reels</li>
+          </ul>
+          <div class="service-glow"></div>
+        </div>
+
+        <div class="service-card glass reveal" data-delay="200">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="service-title">Motion Graphics</h3>
+          <p class="service-desc">Dynamic animations, kinetic typography, and visual effects that breathe life into your brand story and keep viewers glued to the screen.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-circle-dot"></i> Animated Intros & Outros</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Explainer Animations</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Kinetic Typography</li>
+          </ul>
+          <div class="service-glow"></div>
+        </div>
+
+        <div class="service-card glass reveal" data-delay="300">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-headphones-simple"></i>
+          </div>
+          <h3 class="service-title">Audio Production</h3>
+          <p class="service-desc">Professional audio cleanup, mixing, and sound design that ensures every podcast, ad, or score delivers crystal-clear, broadcast-ready quality.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-circle-dot"></i> Podcast Production</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Audio Restoration</li>
+            <li><i class="fa-solid fa-circle-dot"></i> Sound Design</li>
+          </ul>
+          <div class="service-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">A curated selection of work that defines my creative philosophy.</p>
+      </div>
+
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="motion">Motion</button>
+        <button class="filter-btn" data-filter="audio">Audio</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <article class="portfolio-item reveal" data-category="branding"
+          data-title="Brand Identity Design"
+          data-desc="Complete visual identity for Lumière — a luxury skincare brand. Delivered full brand guidelines, logo suite, stationery pack, and social templates."
+          data-img="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+          data-tags="Branding, Logo Design, Guidelines">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="Brand Identity Design – Lumière Skincare" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Branding</span>
+              <h3>Brand Identity Design</h3>
+              <p>Luxury skincare visual identity</p>
+              <button class="portfolio-open" aria-label="View project details">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item reveal" data-category="branding"
+          data-title="Social Media Campaign"
+          data-desc="360° social media design campaign for a tech startup launching in MENA. Included 40+ post templates, stories, and ad creatives optimised for Meta & LinkedIn."
+          data-img="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80"
+          data-tags="Social Media, Digital, Campaign">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80" alt="Social Media Campaign for tech startup" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Branding</span>
+              <h3>Social Media Campaign</h3>
+              <p>40+ templates for MENA launch</p>
+              <button class="portfolio-open" aria-label="View project details">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item reveal" data-category="video"
+          data-title="Promotional Video Edit"
+          data-desc="2-minute promotional video for an international real-estate developer. Full edit from raw footage: colour grading, sound design, subtitles, and music sync."
+          data-img="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80"
+          data-tags="Video Editing, Colour Grading, Sound">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="Promotional Video Edit – Real Estate" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Video</span>
+              <h3>Promotional Video Edit</h3>
+              <p>Real-estate developer showcase</p>
+              <button class="portfolio-open" aria-label="View project details">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item reveal" data-category="motion"
+          data-title="Motion Graphics Intro"
+          data-desc="Animated brand intro and lower-thirds package for a YouTube documentary channel. 3D text, particle effects, and custom easing curves built in After Effects."
+          data-img="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80"
+          data-tags="After Effects, 3D, Animation">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=600&q=80" alt="Motion Graphics Intro Package" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Motion</span>
+              <h3>Motion Graphics Intro</h3>
+              <p>YouTube documentary package</p>
+              <button class="portfolio-open" aria-label="View project details">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item reveal" data-category="audio"
+          data-title="Podcast Audio Cleanup"
+          data-desc="Post-production audio restoration for a weekly business podcast. Removed noise, balanced levels, added intro/outro jingle, and mastered for all major platforms."
+          data-img="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80"
+          data-tags="Adobe Audition, Mastering, Podcast">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80" alt="Podcast Audio Cleanup and Mastering" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Audio</span>
+              <h3>Podcast Audio Cleanup</h3>
+              <p>Business podcast mastering</p>
+              <button class="portfolio-open" aria-label="View project details">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item reveal" data-category="video"
+          data-title="Product Advertisement"
+          data-desc="30-second vertical ad for a beverage brand's social channels. Directed post-production: dynamic cuts, liquid CGI overlays, voice-over mix, and platform delivery."
+          data-img="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80"
+          data-tags="Advertisement, CGI, Social Ads">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="Product Advertisement – Beverage Brand" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Video</span>
+              <h3>Product Advertisement</h3>
+              <p>Beverage brand social ad</p>
+              <button class="portfolio-open" aria-label="View project details">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO MODAL ===== -->
+  <div class="modal-overlay" id="portfolioModal" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal-container glass">
+      <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <img src="" alt="" id="modalImg" loading="lazy" />
+        </div>
+        <div class="modal-info">
+          <div class="modal-tags" id="modalTags"></div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-desc" id="modalDesc"></p>
+          <a href="#contact" class="btn btn-primary modal-cta" id="modalCta">Start a Similar Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Toolkit</span>
+        <h2 class="section-title">Creative <span class="gradient-text">Expertise</span></h2>
+        <p class="section-subtitle">Years of deliberate practice distilled into these proficiency levels.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skills-col reveal">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fa-solid fa-circle skill-dot ps"></i> Adobe Photoshop</span>
+              <span class="skill-pct" data-pct="95">0%</span>
+            </div>
+            <div class="skill-track"><div class="skill-bar ps-bar" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fa-solid fa-circle skill-dot ai"></i> Adobe Illustrator</span>
+              <span class="skill-pct" data-pct="92">0%</span>
+            </div>
+            <div class="skill-track"><div class="skill-bar ai-bar" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fa-solid fa-circle skill-dot pr"></i> Adobe Premiere Pro</span>
+              <span class="skill-pct" data-pct="96">0%</span>
+            </div>
+            <div class="skill-track"><div class="skill-bar pr-bar" data-width="96"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-col reveal">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fa-solid fa-circle skill-dot ae"></i> After Effects</span>
+              <span class="skill-pct" data-pct="94">0%</span>
+            </div>
+            <div class="skill-track"><div class="skill-bar ae-bar" data-width="94"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fa-solid fa-circle skill-dot au"></i> Adobe Audition</span>
+              <span class="skill-pct" data-pct="90">0%</span>
+            </div>
+            <div class="skill-track"><div class="skill-bar au-bar" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fa-solid fa-circle skill-dot fg"></i> Figma</span>
+              <span class="skill-pct" data-pct="88">0%</span>
+            </div>
+            <div class="skill-track"><div class="skill-bar fg-bar" data-width="88"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Software logos row -->
+      <div class="tools-row reveal">
+        <div class="tool-badge"><i class="fa-solid fa-pen-ruler"></i><span>Photoshop</span></div>
+        <div class="tool-badge"><i class="fa-solid fa-bezier-curve"></i><span>Illustrator</span></div>
+        <div class="tool-badge"><i class="fa-solid fa-film"></i><span>Premiere</span></div>
+        <div class="tool-badge"><i class="fa-solid fa-wand-magic-sparkles"></i><span>After Effects</span></div>
+        <div class="tool-badge"><i class="fa-solid fa-headphones"></i><span>Audition</span></div>
+        <div class="tool-badge"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Client Love</span>
+        <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+        <p class="section-subtitle">Relationships built on results, trust, and beautiful creative work.</p>
+      </div>
+
+      <div class="testimonials-slider-wrap reveal">
+        <div class="testimonials-slider" id="testimonialsSlider">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote class="testimonial-text">
+                "Marwan completely transformed our brand. The identity he created for us is beyond anything we imagined — professional, modern, and perfectly aligned with our vision. Every client comments on it. Truly world-class work."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Mitchell, Creative Director" loading="lazy" />
+                <div>
+                  <strong>Sarah Mitchell</strong>
+                  <span>Creative Director, Lumière Paris</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote class="testimonial-text">
+                "The promotional video Marwan produced for our property launch exceeded all expectations. The pacing, colour grading, and emotional storytelling drove a 40% increase in enquiries. I recommend him without hesitation."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Ahmed Al-Rashid, CEO" loading="lazy" />
+                <div>
+                  <strong>Ahmed Al-Rashid</strong>
+                  <span>CEO, Manar Real Estate Group</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <blockquote class="testimonial-text">
+                "Our podcast went from rough recordings to broadcast-quality in Marwan's hands. His audio production skills are exceptional and his communication throughout the project was seamless. A true creative professional."
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" alt="Lena Hoffman, Podcast Host" loading="lazy" />
+                <div>
+                  <strong>Lena Hoffman</strong>
+                  <span>Host, The Growth Blueprint Podcast</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Start a <span class="gradient-text">Project</span></h2>
+        <p class="section-subtitle">Have a vision? Let's turn it into something extraordinary.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact info -->
+        <div class="contact-info reveal">
+          <div class="contact-card glass">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:marwan@example.com">marwan@example.com</a>
+            </div>
+          </div>
+          <div class="contact-card glass">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+201001234567">+20 100 123 4567</a>
+            </div>
+          </div>
+          <div class="contact-card glass">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/201001234567" target="_blank" rel="noopener">Send a Message</a>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://behance.net/marwanelsayed"      target="_blank" rel="noopener" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="https://linkedin.com/in/marwanelsayed"  target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/marwanelsayed"    target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/201001234567"             target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="name" placeholder="John Doe" autocomplete="name" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="john@company.com" autocomplete="email" />
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="Project Enquiry" />
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project…"></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i> Message sent! I'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/201001234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">ME</div>
+          <p>Creating compelling visual identities and high-quality multimedia content that helps brands stand out and communicate with impact.</p>
+          <div class="footer-socials">
+            <a href="https://behance.net/marwanelsayed"     target="_blank" rel="noopener" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="https://linkedin.com/in/marwanelsayed" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/marwanelsayed"   target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/201001234567"            target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Graphic Design</a></li>
+            <li><a href="#services">Video Editing</a></li>
+            <li><a href="#services">Motion Graphics</a></li>
+            <li><a href="#services">Audio Production</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fa-solid fa-envelope"></i> marwan@example.com</li>
+            <li><i class="fa-solid fa-phone"></i> +20 100 123 4567</li>
+            <li><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Marwan ElSayed. All Rights Reserved.</p>
+        <p>Designed & Built with <i class="fa-solid fa-heart" style="color: #6366F1"></i> in Cairo</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
